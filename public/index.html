@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación con Sockets</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/materia/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+</head>
+
+<body>
+  <script src="cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <div class="card-body">
+          <form action="http://localhost:8080/logout" method="get">
+            
+              <div id="usuario"></div>
+  
+              <button class="btn btn-primary btn-block" type="submit">
+                Desloguear
+              </button>
+            </div>
+          </form>
+  
+  <div class="col-md-4 mx-auto">
+    <div class="card text-center">
+      <div class="card-header" >
+        <h3>Agregar producto</h3>
+      </div>
+      <div class="card-body">
+        <form onsubmit="return addProd(this)">
+          
+          <div class="form-group">
+            <input type="text" id="title" class="form-control" placeholder="Nombre del producto" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="number" id="precio" class="form-control" placeholder="Precio" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" id="thumbnail" class="form-control" placeholder="Imagen (URL)" autofocus/>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Agregar
+            </button>
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="tablaProducto"></div> 
+
+
+
+
+  <div class="col-md-4 mx-auto">
+    <div class="card text-center">
+      <div class="card-header">
+        <h3>Centro de Mensajes</h3>
+      </div>
+      <div class="card-body">
+        <div id="mensajes"></div>
+        <form onsubmit="return addMessage(this)">
+          <div class="form-group">
+            <input type="text" id="mail" class="form-control" placeholder="Mail" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" id="nombre" class="form-control" placeholder="Nombre" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" id="apellido" class="form-control" placeholder="Apellido" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="number" id="edad" class="form-control" placeholder="Edad" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" id="alias" class="form-control" placeholder="Alias" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" id="avatar" class="form-control" placeholder="Avatar" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" id="texto" class="form-control" placeholder="Escribe un mensaje" autofocus/>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Enviar
+            </button>
+            
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

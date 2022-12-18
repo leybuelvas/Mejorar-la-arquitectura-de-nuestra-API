@@ -1,0 +1,7 @@
+node_modules
+result_info.txt
+result_infoConsole.txt
+info-v8.log
+infoConsole-v8.log
+curl-7.83.1_7-win64-mingw.zip
+curl-7.83.1_7-win64-mingw

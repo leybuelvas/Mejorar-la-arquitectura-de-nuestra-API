@@ -1,0 +1,2 @@
+{"level":"error","message":"error uno"}
+{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-4078,"fatal":true,"level":"error","port":3306,"syscall":"connect"}
